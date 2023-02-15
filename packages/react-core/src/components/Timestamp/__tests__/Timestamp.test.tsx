@@ -30,10 +30,12 @@ test('Renders component', () => {
   expect(screen.getByTestId('timestamp-container').firstChild).toBeVisible();
 });
 
+const repairSpaces = (s: string) => s.replace(/\u202F/, ' ');
+
 test('Renders with current date by default with default formatting', () => {
   render(<Timestamp />);
 
-  expect(screen.getByText(new Date().toLocaleString())).toBeInTheDocument();
+  expect(screen.getByText(repairSpaces(new Date().toLocaleString()))).toBeInTheDocument();
 });
 
 test('Renders with correct datetime attribute with current date by default', () => {
@@ -42,7 +44,7 @@ test('Renders with correct datetime attribute with current date by default', () 
   // we want an ISO value without the ms to expect as the datetime value.
   const isoDateWithoutMS = new Date().toISOString().split('.')[0];
 
-  expect(screen.getByText(new Date().toLocaleString())).toHaveAttribute(
+  expect(screen.getByText(repairSpaces(new Date().toLocaleString()))).toHaveAttribute(
     'datetime',
     expect.stringMatching(isoDateWithoutMS)
   );
