@@ -30,8 +30,8 @@ import {
   Progress,
   Stack,
   StackItem,
-  Text,
-  TextContent,
+  Content,
+  ContentWrapper,
   TextInput,
   Title,
   Select,
@@ -421,13 +421,13 @@ export const PrimaryDetailInlineModifier: React.FunctionComponent = () => {
   return (
     <DashboardWrapper>
       <PageSection>
-        <TextContent>
-          <Text component="h1">Main title</Text>
-          <Text component="p">
+        <ContentWrapper>
+          <Content component="h1">Main title</Content>
+          <Content component="p">
             Body text should be Overpass Regular at 16px. It should have leading of 24px because <br />
             of it's relative line height of 1.5.
-          </Text>
-        </TextContent>
+          </Content>
+        </ContentWrapper>
       </PageSection>
       <Divider component="div" />
       <PageSection padding={{ default: 'noPadding' }}>

@@ -3,11 +3,11 @@
  */
 import * as React from 'react';
 import { render } from '@testing-library/react';
-import { TextListItem } from '../../TextListItem';
+import { ContentWrapper } from '../../ContentWrapper';
 // any missing imports can usually be resolved by adding them here
 import {} from '../..';
 
-it('TextListItem should match snapshot (auto-generated)', () => {
-  const { asFragment } = render(<TextListItem children={<>ReactNode</>} className={"''"} component={'li'} />);
+it('ContentWrapper should match snapshot (auto-generated)', () => {
+  const { asFragment } = render(<ContentWrapper children={<>ReactNode</>} className={"''"} />);
   expect(asFragment()).toMatchSnapshot();
 });

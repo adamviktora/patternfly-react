@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Title, TitleSizes, TextContent, Flex } from '@patternfly/react-core';
+import { Button, Title, TitleSizes, ContentWrapper, Flex } from '@patternfly/react-core';
 import { Modal, ModalBody, ModalFooter, ModalHeader, ModalVariant } from '@patternfly/react-core/next';
 
 import WarningTriangleIcon from '@patternfly/react-icons/dist/esm/icons/warning-triangle-icon';
@@ -24,12 +24,12 @@ export const ModalCustomHeaderFooter: React.FunctionComponent = () => {
         aria-describedby="modal-custom-header-description"
       >
         <ModalHeader>
-          <TextContent>
+          <ContentWrapper>
             <Title id="modal-custom-header-label" headingLevel="h1" size={TitleSizes['2xl']}>
               Custom header modal
             </Title>
             <p>Add custom content to the header by not passing the titles prop the modal box header component.</p>
-          </TextContent>
+          </ContentWrapper>
         </ModalHeader>
         <ModalBody>
           <span id="modal-custom-header-description">

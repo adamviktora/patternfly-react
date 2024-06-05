@@ -2,7 +2,7 @@ import * as React from 'react';
 import styles from '@patternfly/react-styles/css/components/Content/content';
 import { css } from '@patternfly/react-styles';
 
-export enum TextListVariants {
+export enum ContentListVariants {
   ul = 'ul',
   ol = 'ol',
   dl = 'dl'
@@ -14,10 +14,10 @@ const componentStyles = {
   dl: styles.contentDl
 };
 
-export interface TextListProps extends React.HTMLProps<HTMLElement> {
-  /** Content rendered within the TextList */
+export interface ContentListProps extends React.HTMLProps<HTMLElement> {
+  /** Content rendered within the ContentList */
   children?: React.ReactNode;
-  /** Additional classes added to the TextList */
+  /** Additional classes added to the ContentList */
   className?: string;
   /** The text list component */
   component?: 'ul' | 'ol' | 'dl';
@@ -25,13 +25,13 @@ export interface TextListProps extends React.HTMLProps<HTMLElement> {
   isPlain?: boolean;
 }
 
-export const TextList: React.FunctionComponent<TextListProps> = ({
+export const ContentList: React.FunctionComponent<ContentListProps> = ({
   children = null,
   className = '',
-  component = TextListVariants.ul,
+  component = ContentListVariants.ul,
   isPlain = false,
   ...props
-}: TextListProps) => {
+}: ContentListProps) => {
   const Component: any = component;
 
   return (
@@ -40,4 +40,4 @@ export const TextList: React.FunctionComponent<TextListProps> = ({
     </Component>
   );
 };
-TextList.displayName = 'TextList';
+ContentList.displayName = 'ContentList';

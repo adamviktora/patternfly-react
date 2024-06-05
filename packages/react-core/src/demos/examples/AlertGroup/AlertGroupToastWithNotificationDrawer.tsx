@@ -13,8 +13,8 @@ import {
   NotificationDrawerListItemBody,
   NotificationDrawerListItemHeader,
   PageSection,
-  TextContent,
-  Text,
+  ContentWrapper,
+  Content,
   EmptyStateVariant,
   NumberInput,
   Alert,
@@ -297,7 +297,7 @@ export const AlertGroupToastWithNotificationDrawer: React.FunctionComponent = ()
         {notifications.length === 0 && (
           <EmptyState
             headingLevel="h2"
-            titleText="No notifications found"
+            titleContent="No notifications found"
             icon={SearchIcon}
             variant={EmptyStateVariant.full}
           >
@@ -316,15 +316,15 @@ export const AlertGroupToastWithNotificationDrawer: React.FunctionComponent = ()
       isNotificationDrawerExpanded={isDrawerExpanded}
     >
       <PageSection>
-        <TextContent>
-          <Text component="h1">Alert Group with Notification Drawer demo</Text>
-          <Text component="p">
+        <ContentWrapper>
+          <Content component="h1">Alert Group with Notification Drawer demo</Content>
+          <Content component="p">
             New alerts can be added with buttons below. Each alert has a timeout of 7 seconds, however, even after the
             timeout expires, all alerts are still visible in the notification drawer. By default, only 3 alerts are
             displayed. The rest can be accessed in the notification drawer after clicking on the bell icon in the header
             or by clicking on the overflow message.
-          </Text>
-        </TextContent>
+          </Content>
+        </ContentWrapper>
       </PageSection>
 
       <PageSection>
@@ -348,11 +348,11 @@ export const AlertGroupToastWithNotificationDrawer: React.FunctionComponent = ()
       </PageSection>
 
       <PageSection>
-        <TextContent>
+        <ContentWrapper>
           <br />
-          <Text component="h2">Max displayed alerts</Text>
-          <Text component="p">The maximum number of displayed alerts can be set below.</Text>
-        </TextContent>
+          <Content component="h2">Max displayed alerts</Content>
+          <Content component="p">The maximum number of displayed alerts can be set below.</Content>
+        </ContentWrapper>
         <NumberInput
           value={maxDisplayed}
           min={minAlerts}

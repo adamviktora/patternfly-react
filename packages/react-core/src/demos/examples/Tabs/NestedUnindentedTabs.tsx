@@ -12,8 +12,8 @@ import {
   TabContentBody,
   TabTitleText,
   Title,
-  Text,
-  TextContent,
+  Content,
+  ContentWrapper,
   TitleSizes,
   CardTitle
 } from '@patternfly/react-core';
@@ -65,9 +65,9 @@ export const NestedUnindentedTabs: React.FunctionComponent = () => {
           <TabContentBody>
             <Grid hasGutter>
               <GridItem>
-                <TextContent>
-                  <Text>To perform a standard x86_64 installation using the GUI, you'll need to:</Text>
-                </TextContent>
+                <ContentWrapper>
+                  <Content>To perform a standard x86_64 installation using the GUI, you'll need to:</Content>
+                </ContentWrapper>
               </GridItem>
               <Grid md={6} xl2={3} hasGutter>
                 <Card component="div">

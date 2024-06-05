@@ -36,8 +36,8 @@ import {
   PageToggleButton,
   Popper,
   SkipToContent,
-  Text,
-  TextContent,
+  Content,
+  ContentWrapper,
   Toolbar,
   ToolbarContent,
   ToolbarGroup,
@@ -296,7 +296,7 @@ export const MastheadWithUtilitiesAndUserDropdownMenu: React.FunctionComponent =
     return filteredCopy;
   };
 
-  const onTextChange = (textValue: string) => {
+  const onContentChange = (textValue: string) => {
     if (textValue === '') {
       setFilteredIds(['*']);
       return;
@@ -304,7 +304,9 @@ export const MastheadWithUtilitiesAndUserDropdownMenu: React.FunctionComponent =
 
     const filteredIds =
       refFullOptions
-        ?.filter((item) => (item as HTMLElement).innerText.toLowerCase().includes(textValue.toString().toLowerCase()))
+        ?.filter((item) =>
+          (item as HTMLElement).innerContent.toLowerCase().includes(textValue.toString().toLowerCase())
+        )
         .map((item) => item.id) || [];
     setFilteredIds(filteredIds);
   };
@@ -331,7 +333,7 @@ export const MastheadWithUtilitiesAndUserDropdownMenu: React.FunctionComponent =
     // eslint-disable-next-line no-console
     <Menu ref={menuRef} onActionClick={onFavorite} onSelect={(_ev, itemId) => console.log('selected', itemId)}>
       <MenuSearchInput>
-        <SearchInput aria-label="Filter menu items" onChange={(_event, value) => onTextChange(value)} />
+        <SearchInput aria-label="Filter menu items" onChange={(_event, value) => onContentChange(value)} />
       </MenuSearchInput>
       <Divider />
       <MenuContent>
@@ -532,10 +534,10 @@ export const MastheadWithUtilitiesAndUserDropdownMenu: React.FunctionComponent =
       isBreadcrumbGrouped
       additionalGroupedContent={
         <PageSection>
-          <TextContent>
-            <Text component="h1">Main title</Text>
-            <Text component="p">This is a full page demo.</Text>
-          </TextContent>
+          <ContentWrapper>
+            <Content component="h1">Main title</Content>
+            <Content component="p">This is a full page demo.</Content>
+          </ContentWrapper>
         </PageSection>
       }
     >

@@ -30,8 +30,8 @@ import {
   Select,
   SelectList,
   SelectOption,
-  TextContent,
-  Text,
+  ContentWrapper,
+  Content,
   Title,
   Toolbar,
   ToolbarFilter,
@@ -573,11 +573,11 @@ export const PrimaryDetailCardView: React.FunctionComponent = () => {
                 </Button>
               </FlexItem>
               <FlexItem>
-                <TextContent>
-                  <Text component="small" className="pf-v6-u-color-200 pf-v6-u-font-family-text">
+                <ContentWrapper>
+                  <Content component="small" className="pf-v6-u-color-200 pf-v6-u-font-family-text">
                     Provided by Red Hat
-                  </Text>
-                </TextContent>
+                  </Content>
+                </ContentWrapper>
               </FlexItem>
             </Flex>
           </CardTitle>
@@ -621,10 +621,10 @@ export const PrimaryDetailCardView: React.FunctionComponent = () => {
   return (
     <DashboardWrapper mainContainerId="main-content-card-view-default-nav" breadcrumb={null}>
       <PageSection variant={PageSectionVariants.light}>
-        <TextContent>
-          <Text component="h1">Projects</Text>
-          <Text component="p">This is a demo that showcases Patternfly Cards.</Text>
-        </TextContent>
+        <ContentWrapper>
+          <Content component="h1">Projects</Content>
+          <Content component="p">This is a demo that showcases Patternfly Cards.</Content>
+        </ContentWrapper>
       </PageSection>
       <PageSection isFilled padding={{ default: 'noPadding' }}>
         <Toolbar id="card-view-data-toolbar-group-types" usePageInsets clearAllFilters={onDelete}>

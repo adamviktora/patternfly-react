@@ -3,7 +3,7 @@ import { css } from '@patternfly/react-styles';
 import styles from '@patternfly/react-styles/css/components/Content/content';
 import { useOUIAProps, OUIAProps } from '../../helpers';
 
-export enum TextVariants {
+export enum ContentVariants {
   h1 = 'h1',
   h2 = 'h2',
   h3 = 'h3',
@@ -17,12 +17,12 @@ export enum TextVariants {
   pre = 'pre'
 }
 
-export interface TextProps extends React.HTMLProps<HTMLElement>, OUIAProps {
-  /** The text component */
+export interface ContentProps extends React.HTMLProps<HTMLElement>, OUIAProps {
+  /** The content component */
   component?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'a' | 'small' | 'blockquote' | 'pre';
-  /** Content rendered within the Text */
+  /** Actual content rendered inside the component. */
   children?: React.ReactNode;
-  /** Additional classes added to the Text */
+  /** Additional classes added to the Content component */
   className?: string;
   /** Flag to indicate the link has visited styles applied if the browser determines the link has been visited */
   isVisitedLink?: boolean;
@@ -46,17 +46,17 @@ const componentStyles = {
   pre: styles.contentPre
 };
 
-export const Text: React.FunctionComponent<TextProps> = ({
+export const Content: React.FunctionComponent<ContentProps> = ({
   children = null,
   className = '',
-  component = TextVariants.p,
+  component = ContentVariants.p,
   isVisitedLink = false,
   ouiaId,
   ouiaSafe = true,
   ...props
-}: TextProps) => {
+}: ContentProps) => {
   const Component: any = component;
-  const ouiaProps = useOUIAProps(Text.displayName, ouiaId, ouiaSafe);
+  const ouiaProps = useOUIAProps(Content.displayName, ouiaId, ouiaSafe);
 
   return (
     <Component
@@ -64,7 +64,7 @@ export const Text: React.FunctionComponent<TextProps> = ({
       {...props}
       data-pf-content
       className={css(
-        isVisitedLink && component === TextVariants.a && styles.modifiers.visited,
+        isVisitedLink && component === ContentVariants.a && styles.modifiers.visited,
         componentStyles[component],
         className
       )}
@@ -73,4 +73,4 @@ export const Text: React.FunctionComponent<TextProps> = ({
     </Component>
   );
 };
-Text.displayName = 'Text';
+Content.displayName = 'Content';

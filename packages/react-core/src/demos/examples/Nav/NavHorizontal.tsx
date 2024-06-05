@@ -24,8 +24,8 @@ import {
   Page,
   PageSection,
   SkipToContent,
-  TextContent,
-  Text,
+  ContentWrapper,
+  Content,
   Toolbar,
   ToolbarContent,
   ToolbarGroup,
@@ -211,13 +211,13 @@ export const NavHorizontal: React.FunctionComponent = () => {
     <React.Fragment>
       <Page header={Header} skipToContent={PageSkipToContent} breadcrumb={DashboardBreadcrumb} mainContainerId={pageId}>
         <PageSection>
-          <TextContent>
-            <Text component="h1">Main title</Text>
-            <Text component="p">
+          <ContentWrapper>
+            <Content component="h1">Main title</Content>
+            <Content component="p">
               Body text should be Overpass Regular at 16px. It should have leading of 24px because <br />
               of its relative line height of 1.5.
-            </Text>
-          </TextContent>
+            </Content>
+          </ContentWrapper>
         </PageSection>
         <PageSection>
           <Gallery hasGutter>

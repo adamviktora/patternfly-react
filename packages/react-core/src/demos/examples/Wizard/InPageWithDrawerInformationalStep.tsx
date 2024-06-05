@@ -21,8 +21,8 @@ import {
   PageSidebar,
   PageSidebarBody,
   SkipToContent,
-  Text,
-  TextContent,
+  Content,
+  ContentWrapper,
   Masthead,
   PageToggleButton,
   MastheadToggle,
@@ -138,8 +138,8 @@ export const WizardFullPageWithDrawerInfoStepDemo: React.FunctionComponent = () 
           spaceItems={{ default: 'spaceItemsLg' }}
           height="100%"
         >
-          <TextContent>
-            <Text>{stepName} content</Text>
+          <ContentWrapper>
+            <Content>{stepName} content</Content>
             <p>
               Wizard description goes here. If you need more assistance,{' '}
               <Button isInline variant="link" onClick={onOpenClick}>
@@ -147,7 +147,7 @@ export const WizardFullPageWithDrawerInfoStepDemo: React.FunctionComponent = () 
               </Button>{' '}
               in the side drawer.{' '}
             </p>
-          </TextContent>
+          </ContentWrapper>
         </Flex>
       </DrawerContent>
     </Drawer>
@@ -164,10 +164,10 @@ export const WizardFullPageWithDrawerInfoStepDemo: React.FunctionComponent = () 
         mainContainerId={pageId}
       >
         <PageSection>
-          <TextContent>
-            <Text component="h1">Main title</Text>
-            <Text component="p">A demo of a wizard in a page.</Text>
-          </TextContent>
+          <ContentWrapper>
+            <Content component="h1">Main title</Content>
+            <Content component="p">A demo of a wizard in a page.</Content>
+          </ContentWrapper>
         </PageSection>
         <PageSection type={PageSectionTypes.wizard} ß>
           <Wizard>
@@ -189,7 +189,7 @@ export const WizardFullPageWithDrawerInfoStepDemo: React.FunctionComponent = () 
             <WizardStep body={null} name="Additional" id="wizard-step-3">
               {createStepContentWithDrawer('Additional step')}
             </WizardStep>
-            <WizardStep body={null} name="Review" id="wizard-step-4" footer={{ nextButtonText: 'Finish' }}>
+            <WizardStep body={null} name="Review" id="wizard-step-4" footer={{ nextButtonContent: 'Finish' }}>
               {createStepContentWithDrawer('Review step')}
             </WizardStep>
           </Wizard>

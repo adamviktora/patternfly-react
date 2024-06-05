@@ -21,9 +21,9 @@ import {
   PageSection,
   Pagination,
   PaginationVariant,
-  Text,
-  TextContent,
-  TextVariants
+  Content,
+  ContentWrapper,
+  ContentVariants
 } from '@patternfly/react-core';
 import { Table, TableText, Thead, Tr, Th, Tbody, Td } from '@patternfly/react-table';
 import FilterIcon from '@patternfly/react-icons/dist/esm/icons/filter-icon';
@@ -213,12 +213,12 @@ export const TableColumnManagement: React.FunctionComponent = () => {
       isOpen={isModalOpen}
       variant="small"
       description={
-        <TextContent>
-          <Text component={TextVariants.p}>Selected categories will be displayed in the table.</Text>
+        <ContentWrapper>
+          <Content component={ContentVariants.p}>Selected categories will be displayed in the table.</Content>
           <Button isInline onClick={selectAllColumns} variant="link">
             Select all
           </Button>
-        </TextContent>
+        </ContentWrapper>
       }
       onClose={handleModalToggle}
       actions={[

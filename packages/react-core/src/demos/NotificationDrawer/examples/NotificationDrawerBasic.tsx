@@ -32,8 +32,8 @@ import {
   PageSidebar,
   PageSidebarBody,
   SkipToContent,
-  TextContent,
-  Text,
+  ContentWrapper,
+  Content,
   PageToggleButton,
   Masthead,
   MastheadMain,
@@ -503,7 +503,12 @@ export const NotificationDrawerBasic: React.FunctionComponent = () => {
           </NotificationDrawerList>
         )}
         {!shouldShowNotifications && (
-          <EmptyState headingLevel="h2" titleText="No alerts found" icon={SearchIcon} variant={EmptyStateVariant.full}>
+          <EmptyState
+            headingLevel="h2"
+            titleContent="No alerts found"
+            icon={SearchIcon}
+            variant={EmptyStateVariant.full}
+          >
             <EmptyStateBody>
               There are currently no alerts. There may be silenced critical alerts however.
             </EmptyStateBody>
@@ -534,13 +539,13 @@ export const NotificationDrawerBasic: React.FunctionComponent = () => {
         mainContainerId={pageId}
       >
         <PageSection>
-          <TextContent>
-            <Text component="h1">Main title</Text>
-            <Text component="p">
+          <ContentWrapper>
+            <Content component="h1">Main title</Content>
+            <Content component="p">
               Body text should be Overpass Regular at 16px. It should have leading of 24px because <br />
               of its relative line height of 1.5.
-            </Text>
-          </TextContent>
+            </Content>
+          </ContentWrapper>
         </PageSection>
         <PageSection>Panel section content</PageSection>
       </Page>

@@ -12,8 +12,8 @@ import {
   PageSidebar,
   PageSidebarBody,
   SkipToContent,
-  TextContent,
-  Text
+  ContentWrapper,
+  Content
 } from '@patternfly/react-core';
 import { DashboardBreadcrumb } from '@patternfly/react-core/dist/js/demos/DashboardWrapper';
 import { DashboardHeader } from '@patternfly/react-core/dist/js/demos/DashboardHeader';
@@ -72,13 +72,13 @@ export const NavDefault: React.FunctionComponent = () => {
         mainContainerId={pageId}
       >
         <PageSection>
-          <TextContent>
-            <Text component="h1">Main title</Text>
-            <Text component="p">
+          <ContentWrapper>
+            <Content component="h1">Main title</Content>
+            <Content component="p">
               Body text should be Overpass Regular at 16px. It should have leading of 24px because <br />
               of its relative line height of 1.5.
-            </Text>
-          </TextContent>
+            </Content>
+          </ContentWrapper>
         </PageSection>
         <PageSection>
           <Gallery hasGutter>

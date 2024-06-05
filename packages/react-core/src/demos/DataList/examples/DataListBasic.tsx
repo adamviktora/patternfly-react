@@ -1,6 +1,9 @@
 import React from 'react';
 import {
   Button,
+  Content,
+  ContentVariants,
+  ContentWrapper,
   DataList,
   DataListItem,
   DataListCell,
@@ -16,9 +19,6 @@ import {
   PageSection,
   PageSectionVariants,
   Pagination,
-  Text,
-  TextContent,
-  TextVariants,
   Toolbar,
   ToolbarItem,
   ToolbarContent
@@ -77,10 +77,10 @@ export const DataListBasic: React.FunctionComponent = () => {
     <React.Fragment>
       <DashboardWrapper mainContainerId="main-content-datalist-view-default-nav" breadcrumb={null}>
         <PageSection variant={PageSectionVariants.light}>
-          <TextContent>
-            <Text component="h1">Projects</Text>
-            <Text component="p">This is a demo that showcases PatternFly Data List</Text>
-          </TextContent>
+          <ContentWrapper>
+            <Content component="h1">Projects</Content>
+            <Content component="p">This is a demo that showcases PatternFly Data List</Content>
+          </ContentWrapper>
         </PageSection>
         <PageSection isFilled>
           <Toolbar id="toolbar-group-types">
@@ -94,13 +94,13 @@ export const DataListBasic: React.FunctionComponent = () => {
                     <DataListCell isFilled={false} key="buttons1">
                       <Flex direction={{ default: 'column' }}>
                         <FlexItem>
-                          <Text component={TextVariants.p}>patternfly</Text>
+                          <Content component={ContentVariants.p}>patternfly</Content>
                         </FlexItem>
                         <FlexItem>
-                          <Text component={TextVariants.small}>
+                          <Content component={ContentVariants.small}>
                             Working repo for
                             <a href="http://www.patternfly.org/">PatternFly</a>
-                          </Text>
+                          </Content>
                         </FlexItem>
                         <FlexItem>
                           <Flex spaceItems={{ default: 'spaceItemsSm' }}>
@@ -139,10 +139,10 @@ export const DataListBasic: React.FunctionComponent = () => {
                     <DataListCell isFilled={false} key="buttons2">
                       <Flex direction={{ default: 'column' }}>
                         <FlexItem>
-                          <Text component={TextVariants.small}>patternfly-elements</Text>
+                          <Content component={ContentVariants.small}>patternfly-elements</Content>
                         </FlexItem>
                         <FlexItem>
-                          <Text component={TextVariants.small}>PatternFly elements</Text>
+                          <Content component={ContentVariants.small}>PatternFly elements</Content>
                         </FlexItem>
                         <FlexItem>
                           <Flex spaceItems={{ default: 'spaceItemsSm' }}>
@@ -191,7 +191,7 @@ export const DataListBasic: React.FunctionComponent = () => {
                     <DataListCell isFilled={false} key="Demo-item3">
                       <Flex direction={{ default: 'column' }}>
                         <FlexItem>
-                          <Text component={TextVariants.small}>patternfly-unified-design-kit</Text>
+                          <Content component={ContentVariants.small}>patternfly-unified-design-kit</Content>
                         </FlexItem>
                       </Flex>
                     </DataListCell>,
@@ -216,13 +216,13 @@ export const DataListBasic: React.FunctionComponent = () => {
                     <DataListCell isFilled={false} key="buttons4">
                       <Flex direction={{ default: 'column' }}>
                         <FlexItem>
-                          <Text component={TextVariants.small}>patternfly</Text>
+                          <Content component={ContentVariants.small}>patternfly</Content>
                         </FlexItem>
                         <FlexItem>
-                          <Text component={TextVariants.small}>
+                          <Content component={ContentVariants.small}>
                             Working repo for
                             <a href="http://www.patternfly.org/">PatternFly</a>
-                          </Text>
+                          </Content>
                         </FlexItem>
                         <FlexItem>
                           <Flex spaceItems={{ default: 'spaceItemsSm' }}>
@@ -262,10 +262,10 @@ export const DataListBasic: React.FunctionComponent = () => {
                     <DataListCell isFilled={false} key="buttons5">
                       <Flex direction={{ default: 'column' }}>
                         <FlexItem>
-                          <Text component={TextVariants.small}>patternfly-elements</Text>
+                          <Content component={ContentVariants.small}>patternfly-elements</Content>
                         </FlexItem>
                         <FlexItem>
-                          <Text component={TextVariants.small}>PatternFly elements</Text>
+                          <Content component={ContentVariants.small}>PatternFly elements</Content>
                         </FlexItem>
                         <FlexItem>
                           <Flex spaceItems={{ default: 'spaceItemsSm' }}>

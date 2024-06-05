@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Button,
+  ContentWrapper,
   Drawer,
   DrawerPanelContent,
   DrawerContent,
@@ -15,7 +16,6 @@ import {
   Sidebar,
   SidebarContent,
   SidebarPanel,
-  TextContent,
   getResizeObserver,
   DrawerContext
 } from '@patternfly/react-core';
@@ -100,7 +100,7 @@ export const JumpLinksWithDrawer = () => {
                   <Button onClick={onToggleClick}>Toggle drawer</Button>
                 </PageSection>
                 <PageSection>
-                  <TextContent>
+                  <ContentWrapper>
                     {headings.map((heading) => (
                       <div key={heading} style={{ maxWidth: '800px', marginBottom: '32px' }}>
                         <h2 id={`jump-links-drawer-jump-links-${heading.toLowerCase()}`} tabIndex={-1}>
@@ -132,7 +132,7 @@ export const JumpLinksWithDrawer = () => {
                         </p>
                       </div>
                     ))}
-                  </TextContent>
+                  </ContentWrapper>
                 </PageSection>
               </SidebarContent>
             </Sidebar>

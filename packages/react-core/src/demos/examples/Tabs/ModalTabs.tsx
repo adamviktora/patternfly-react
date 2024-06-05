@@ -2,8 +2,8 @@ import React from 'react';
 import { DashboardWrapper } from '@patternfly/react-core/dist/js/demos/DashboardWrapper';
 import {
   PageSection,
-  TextContent,
-  Text,
+  ContentWrapper,
+  Content,
   Gallery,
   Card,
   CardBody,
@@ -82,10 +82,10 @@ export const ModalTabs: React.FunctionComponent = () => {
     <React.Fragment>
       <DashboardWrapper mainContainerId="main-content-card-view-default-nav">
         <PageSection>
-          <TextContent>
-            <Text component="h1">Projects</Text>
-            <Text component="p">Click any project card to view Tabs within Modals.</Text>
-          </TextContent>
+          <ContentWrapper>
+            <Content component="h1">Projects</Content>
+            <Content component="p">Click any project card to view Tabs within Modals.</Content>
+          </ContentWrapper>
         </PageSection>
         <PageSection isFilled>
           <Gallery hasGutter aria-label="Selectable card container">

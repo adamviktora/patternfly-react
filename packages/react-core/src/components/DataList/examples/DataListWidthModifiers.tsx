@@ -1,5 +1,8 @@
 import React from 'react';
 import {
+  Content,
+  ContentVariants,
+  ContentWrapper,
   DataList,
   DataListItem,
   DataListCell,
@@ -9,9 +12,6 @@ import {
   DataListContent,
   DataListItemCells,
   DataListItemRow,
-  Text,
-  TextVariants,
-  TextContent,
   Dropdown,
   DropdownList,
   DropdownItem,
@@ -44,9 +44,9 @@ export const DataListWidthModifiers: React.FunctionComponent = () => {
   return (
     <>
       <div key="example-1">
-        <TextContent>
-          <Text component={TextVariants.h4}>Default fitting - example 1</Text>
-        </TextContent>
+        <ContentWrapper>
+          <Content component={ContentVariants.h4}>Default fitting - example 1</Content>
+        </ContentWrapper>
         <DataList aria-label="Width modifier data list example 1">
           <DataListItem aria-labelledby="width-ex1-item1">
             <DataListItemRow>
@@ -71,9 +71,9 @@ export const DataListWidthModifiers: React.FunctionComponent = () => {
         </DataList>
       </div>
       <div key="example-2">
-        <TextContent>
-          <Text component={TextVariants.h4}>Flex modifiers - example 2</Text>
-        </TextContent>
+        <ContentWrapper>
+          <Content component={ContentVariants.h4}>Flex modifiers - example 2</Content>
+        </ContentWrapper>
         <DataList aria-label="Width modifier data list example 2">
           <DataListItem aria-labelledby="width-ex2-item1">
             <DataListItemRow>
@@ -139,9 +139,9 @@ export const DataListWidthModifiers: React.FunctionComponent = () => {
         </DataList>
       </div>
       <div key="example-3">
-        <TextContent>
-          <Text component={TextVariants.h4}>Flex modifiers - example 3</Text>
-        </TextContent>
+        <ContentWrapper>
+          <Content component={ContentVariants.h4}>Flex modifiers - example 3</Content>
+        </ContentWrapper>
         <DataList aria-label="Width modifier data list example 3">
           <DataListItem aria-labelledby="width-ex3-item1" isExpanded={show}>
             <DataListItemRow>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { AboutModal, Button, TextContent, TextList, TextListItem } from '@patternfly/react-core';
+import { AboutModal, Button, ContentList, ContentListItem, ContentWrapper } from '@patternfly/react-core';
 import brandImg from '../../assets/PF-IconLogo.svg';
 
 export const AboutModalBasic: React.FunctionComponent = () => {
@@ -23,24 +23,24 @@ export const AboutModalBasic: React.FunctionComponent = () => {
         backgroundImageSrc="/assets/images/pf-background.svg"
         productName="name"
       >
-        <TextContent>
-          <TextList component="dl">
-            <TextListItem component="dt">CFME version</TextListItem>
-            <TextListItem component="dd">5.5.3.4.20102789036450</TextListItem>
-            <TextListItem component="dt">Cloudforms Version</TextListItem>
-            <TextListItem component="dd">4.1</TextListItem>
-            <TextListItem component="dt">Server name</TextListItem>
-            <TextListItem component="dd">40DemoMaster</TextListItem>
-            <TextListItem component="dt">User name</TextListItem>
-            <TextListItem component="dd">Administrator</TextListItem>
-            <TextListItem component="dt">User role</TextListItem>
-            <TextListItem component="dd">EvmRole-super_administrator</TextListItem>
-            <TextListItem component="dt">Browser version</TextListItem>
-            <TextListItem component="dd">601.2</TextListItem>
-            <TextListItem component="dt">Browser OS</TextListItem>
-            <TextListItem component="dd">Mac</TextListItem>
-          </TextList>
-        </TextContent>
+        <ContentWrapper>
+          <ContentList component="dl">
+            <ContentListItem component="dt">CFME version</ContentListItem>
+            <ContentListItem component="dd">5.5.3.4.20102789036450</ContentListItem>
+            <ContentListItem component="dt">Cloudforms Version</ContentListItem>
+            <ContentListItem component="dd">4.1</ContentListItem>
+            <ContentListItem component="dt">Server name</ContentListItem>
+            <ContentListItem component="dd">40DemoMaster</ContentListItem>
+            <ContentListItem component="dt">User name</ContentListItem>
+            <ContentListItem component="dd">Administrator</ContentListItem>
+            <ContentListItem component="dt">User role</ContentListItem>
+            <ContentListItem component="dd">EvmRole-super_administrator</ContentListItem>
+            <ContentListItem component="dt">Browser version</ContentListItem>
+            <ContentListItem component="dd">601.2</ContentListItem>
+            <ContentListItem component="dt">Browser OS</ContentListItem>
+            <ContentListItem component="dd">Mac</ContentListItem>
+          </ContentList>
+        </ContentWrapper>
       </AboutModal>
     </React.Fragment>
   );

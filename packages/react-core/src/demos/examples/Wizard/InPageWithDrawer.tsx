@@ -21,8 +21,8 @@ import {
   PageSidebar,
   PageSidebarBody,
   SkipToContent,
-  Text,
-  TextContent,
+  Content,
+  ContentWrapper,
   Masthead,
   PageToggleButton,
   MastheadToggle,
@@ -159,10 +159,10 @@ export const WizardFullPageWithDrawerDemo: React.FunctionComponent = () => {
         mainContainerId={pageId}
       >
         <PageSection>
-          <TextContent>
-            <Text component="h1">Main title</Text>
-            <Text component="p">A demo of a wizard in a page.</Text>
-          </TextContent>
+          <ContentWrapper>
+            <Content component="h1">Main title</Content>
+            <Content component="p">A demo of a wizard in a page.</Content>
+          </ContentWrapper>
         </PageSection>
         <PageSection type={PageSectionTypes.wizard}>
           <Wizard>
@@ -184,7 +184,7 @@ export const WizardFullPageWithDrawerDemo: React.FunctionComponent = () => {
             <WizardStep body={null} name="Additional" id="wizard-step-3">
               {createStepContentWithDrawer('Additional step')}
             </WizardStep>
-            <WizardStep body={null} name="Review" id="wizard-step-4" footer={{ nextButtonText: 'Finish' }}>
+            <WizardStep body={null} name="Review" id="wizard-step-4" footer={{ nextButtonContent: 'Finish' }}>
               {createStepContentWithDrawer('Review step')}
             </WizardStep>
           </Wizard>

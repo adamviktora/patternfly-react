@@ -31,8 +31,8 @@ import {
   PageSidebarBody,
   PageToggleButton,
   SkipToContent,
-  Text,
-  TextContent,
+  Content,
+  ContentWrapper,
   Toolbar,
   ToolbarContent,
   ToolbarGroup,
@@ -270,10 +270,10 @@ export const PageStickySectionBreadcrumb: React.FunctionComponent = () => {
       }}
     >
       <PageSection isWidthLimited>
-        <TextContent>
-          <Text component="h1">Main title</Text>
-          <Text component="p">This is a full page demo.</Text>
-        </TextContent>
+        <ContentWrapper>
+          <Content component="h1">Main title</Content>
+          <Content component="p">This is a full page demo.</Content>
+        </ContentWrapper>
       </PageSection>
       <PageSection isWidthLimited>
         <Gallery hasGutter>

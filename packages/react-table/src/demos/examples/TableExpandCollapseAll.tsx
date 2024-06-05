@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Card, Label, PageSection, TextVariants, Text, TextContent } from '@patternfly/react-core';
+import { Card, Label, PageSection, ContentVariants, Content, ContentWrapper } from '@patternfly/react-core';
 import { Table, Thead, Tbody, Tr, Th, Td, ExpandableRowContent } from '@patternfly/react-table';
 import { DashboardWrapper } from '@patternfly/react-table/dist/esm/demos/DashboardWrapper';
 
@@ -22,17 +22,17 @@ const serverData: Server[] = [
     workspaces: 7,
     status: { title: <Label color="green">Running</Label> },
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>
-          Location<Text component={TextVariants.small}>Boston</Text>
-        </Text>
-        <Text component={TextVariants.p}>
-          Last Modified<Text component={TextVariants.small}>2 hours ago</Text>
-        </Text>
-        <Text component={TextVariants.p}>
-          URL<Text component={TextVariants.small}>http://www.redhat.com/en/office-locations/US-node1</Text>
-        </Text>
-      </TextContent>
+      <ContentWrapper>
+        <Content component={ContentVariants.p}>
+          Location<Content component={ContentVariants.small}>Boston</Content>
+        </Content>
+        <Content component={ContentVariants.p}>
+          Last Modified<Content component={ContentVariants.small}>2 hours ago</Content>
+        </Content>
+        <Content component={ContentVariants.p}>
+          URL<Content component={ContentVariants.small}>http://www.redhat.com/en/office-locations/US-node1</Content>
+        </Content>
+      </ContentWrapper>
     )
   },
   {
@@ -42,17 +42,17 @@ const serverData: Server[] = [
     workspaces: 17,
     status: { title: <Label color="red">Down</Label> },
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>
-          Location<Text component={TextVariants.small}>Atlanta</Text>
-        </Text>
-        <Text component={TextVariants.p}>
-          Last Modified<Text component={TextVariants.small}>5 hours ago</Text>
-        </Text>
-        <Text component={TextVariants.p}>
-          URL<Text component={TextVariants.small}>http://www.redhat.com/en/office-locations/US-node2</Text>
-        </Text>
-      </TextContent>
+      <ContentWrapper>
+        <Content component={ContentVariants.p}>
+          Location<Content component={ContentVariants.small}>Atlanta</Content>
+        </Content>
+        <Content component={ContentVariants.p}>
+          Last Modified<Content component={ContentVariants.small}>5 hours ago</Content>
+        </Content>
+        <Content component={ContentVariants.p}>
+          URL<Content component={ContentVariants.small}>http://www.redhat.com/en/office-locations/US-node2</Content>
+        </Content>
+      </ContentWrapper>
     )
   },
   {
@@ -62,17 +62,17 @@ const serverData: Server[] = [
     workspaces: 3,
     status: { title: <Label color="green">Running</Label> },
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>
-          Location<Text component={TextVariants.small}>San Francisco</Text>
-        </Text>
-        <Text component={TextVariants.p}>
-          Last Modified<Text component={TextVariants.small}>20 minutes ago</Text>
-        </Text>
-        <Text component={TextVariants.p}>
-          URL<Text component={TextVariants.small}>http://www.redhat.com/en/office-locations/US-node3</Text>
-        </Text>
-      </TextContent>
+      <ContentWrapper>
+        <Content component={ContentVariants.p}>
+          Location<Content component={ContentVariants.small}>San Francisco</Content>
+        </Content>
+        <Content component={ContentVariants.p}>
+          Last Modified<Content component={ContentVariants.small}>20 minutes ago</Content>
+        </Content>
+        <Content component={ContentVariants.p}>
+          URL<Content component={ContentVariants.small}>http://www.redhat.com/en/office-locations/US-node3</Content>
+        </Content>
+      </ContentWrapper>
     )
   },
   {
@@ -82,17 +82,17 @@ const serverData: Server[] = [
     workspaces: 15,
     status: { title: <Label color="blue">Needs Maintenance</Label> },
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>
-          Location<Text component={TextVariants.small}>Raleigh</Text>
-        </Text>
-        <Text component={TextVariants.p}>
-          Last Modified<Text component={TextVariants.small}>10 minutes ago</Text>
-        </Text>
-        <Text component={TextVariants.p}>
-          URL<Text component={TextVariants.small}>http://www.redhat.com/en/office-locations/US-node4</Text>
-        </Text>
-      </TextContent>
+      <ContentWrapper>
+        <Content component={ContentVariants.p}>
+          Location<Content component={ContentVariants.small}>Raleigh</Content>
+        </Content>
+        <Content component={ContentVariants.p}>
+          Last Modified<Content component={ContentVariants.small}>10 minutes ago</Content>
+        </Content>
+        <Content component={ContentVariants.p}>
+          URL<Content component={ContentVariants.small}>http://www.redhat.com/en/office-locations/US-node4</Content>
+        </Content>
+      </ContentWrapper>
     )
   },
   {
@@ -102,17 +102,17 @@ const serverData: Server[] = [
     workspaces: 17,
     status: { title: <Label color="orange">Stopped</Label> },
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>
-          Location<Text component={TextVariants.small}>Atlanta</Text>
-        </Text>
-        <Text component={TextVariants.p}>
-          Last Modified<Text component={TextVariants.small}>15 minutes ago</Text>
-        </Text>
-        <Text component={TextVariants.p}>
-          URL<Text component={TextVariants.small}>http://www.redhat.com/en/office-locations/US-node5</Text>
-        </Text>
-      </TextContent>
+      <ContentWrapper>
+        <Content component={ContentVariants.p}>
+          Location<Content component={ContentVariants.small}>Atlanta</Content>
+        </Content>
+        <Content component={ContentVariants.p}>
+          Last Modified<Content component={ContentVariants.small}>15 minutes ago</Content>
+        </Content>
+        <Content component={ContentVariants.p}>
+          URL<Content component={ContentVariants.small}>http://www.redhat.com/en/office-locations/US-node5</Content>
+        </Content>
+      </ContentWrapper>
     )
   }
 ];

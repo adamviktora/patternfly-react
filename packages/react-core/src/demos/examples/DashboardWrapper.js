@@ -10,8 +10,8 @@ import {
   PageSidebar,
   PageSidebarBody,
   SkipToContent,
-  Text,
-  TextContent
+  Content,
+  ContentWrapper
 } from '@patternfly/react-core';
 import DashboardHeader from '@patternfly/react-core/src/demos/examples/DashboardHeader';
 
@@ -28,10 +28,10 @@ export const DashboardBreadcrumb = (
 
 export const PageTemplateTitle = (
   <PageSection>
-    <TextContent>
-      <Text component="h1">Main title</Text>
-      <Text component="p">This is a full page demo.</Text>
-    </TextContent>
+    <ContentWrapper>
+      <Content component="h1">Main title</Content>
+      <Content component="p">This is a full page demo.</Content>
+    </ContentWrapper>
   </PageSection>
 );
 

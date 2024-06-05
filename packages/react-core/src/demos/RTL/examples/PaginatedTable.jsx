@@ -32,9 +32,9 @@ import {
   PageToggleButton,
   Pagination,
   PaginationVariant,
-  Text,
-  TextContent,
-  TextVariants,
+  Content,
+  ContentWrapper,
+  ContentVariants,
   Toolbar,
   ToolbarContent,
   ToolbarGroup,
@@ -181,8 +181,8 @@ export const PaginatedTableAction = () => {
     }
   };
 
-  const renderLabel = (labelText) => {
-    switch (labelText) {
+  const renderLabel = (labelContent) => {
+    switch (labelContent) {
       case 'Running':
       case 'רץ':
         return (
@@ -448,10 +448,10 @@ export const PaginatedTableAction = () => {
           </Breadcrumb>
         </PageBreadcrumb>
         <PageSection variant="light">
-          <TextContent>
-            <Text component={TextVariants.h1}>{translation.title}</Text>
-            <Text component={TextVariants.p}>{translation.body}</Text>
-          </TextContent>
+          <ContentWrapper>
+            <Content component={ContentVariants.h1}>{translation.title}</Content>
+            <Content component={ContentVariants.p}>{translation.body}</Content>
+          </ContentWrapper>
         </PageSection>
         <PageSection>
           <Card>

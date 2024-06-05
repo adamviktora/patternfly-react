@@ -24,8 +24,8 @@ import {
   Icon,
   PageSection,
   PageSectionVariants,
-  Text,
-  TextContent
+  Content,
+  ContentWrapper
 } from '@patternfly/react-core';
 
 import { DashboardWrapper } from '@patternfly/react-core/src/demos/DashboardWrapper';
@@ -135,10 +135,10 @@ export const DataListExpandableControlInToolbar: React.FunctionComponent = () =>
     <React.Fragment>
       <DashboardWrapper mainContainerId="main-content-datalist-view-default-nav" breadcrumb={null}>
         <PageSection variant={PageSectionVariants.light}>
-          <TextContent>
-            <Text component="h1">Projects</Text>
-            <Text component="p">This is a demo that showcases PatternFly Data List</Text>
-          </TextContent>
+          <ContentWrapper>
+            <Content component="h1">Projects</Content>
+            <Content component="p">This is a demo that showcases PatternFly Data List</Content>
+          </ContentWrapper>
         </PageSection>
         <PageSection isFilled>
           {renderToolbar()}

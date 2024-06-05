@@ -11,9 +11,9 @@ import {
   Flex,
   Modal,
   ModalVariant,
-  Text,
-  TextContent,
-  TextVariants,
+  Content,
+  ContentWrapper,
+  ContentVariants,
   Wizard,
   WizardHeader,
   WizardStep
@@ -59,8 +59,8 @@ export const WizardModalWithDrawerInfoStepDemo: React.FunctionComponent = () => 
           spaceItems={{ default: 'spaceItemsLg' }}
           height="100%"
         >
-          <TextContent>
-            <Text component={TextVariants.h1}>{stepName} content</Text>
+          <ContentWrapper>
+            <Content component={ContentVariants.h1}>{stepName} content</Content>
             <p>
               Wizard description goes here. If you need more assistance,{' '}
               <Button isInline variant="link" onClick={onOpenClick}>
@@ -68,7 +68,7 @@ export const WizardModalWithDrawerInfoStepDemo: React.FunctionComponent = () => 
               </Button>{' '}
               in the side drawer.{' '}
             </p>
-          </TextContent>
+          </ContentWrapper>
         </Flex>
       </DrawerContent>
     </Drawer>
@@ -113,7 +113,7 @@ export const WizardModalWithDrawerInfoStepDemo: React.FunctionComponent = () => 
         <WizardStep body={null} name="Additional" id="wizard-step-3">
           {createStepContentWithDrawer('Additional step')}
         </WizardStep>
-        <WizardStep body={null} name="Review" id="wizard-step-4" footer={{ nextButtonText: 'Finish' }}>
+        <WizardStep body={null} name="Review" id="wizard-step-4" footer={{ nextButtonContent: 'Finish' }}>
           {createStepContentWithDrawer('Review step')}
         </WizardStep>
       </Wizard>
