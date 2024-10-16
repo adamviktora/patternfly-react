@@ -96,8 +96,6 @@ const DropdownBase: React.FunctionComponent<DropdownProps> = ({
   menuHeight,
   maxMenuHeight,
   shouldFocusFirstItemOnOpen = false,
-  shouldPreventScrollOnItemFocus = true,
-  focusTimeoutDelay = 0,
   ...props
 }: DropdownProps) => {
   const localMenuRef = React.useRef<HTMLDivElement>();
