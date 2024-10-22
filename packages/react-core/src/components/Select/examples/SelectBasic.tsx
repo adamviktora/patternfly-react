@@ -6,6 +6,8 @@ export const SelectBasic: React.FunctionComponent = () => {
   const [selected, setSelected] = React.useState<string>('Select a value');
   const [isDisabled, setIsDisabled] = React.useState<boolean>(false);
 
+  const menuRef = React.useRef<HTMLDivElement>();
+
   const onToggleClick = () => {
     setIsOpen(!isOpen);
   };
@@ -16,6 +18,24 @@ export const SelectBasic: React.FunctionComponent = () => {
 
     setSelected(value as string);
     setIsOpen(false);
+  };
+
+  const onKeyDown = (event: React.KeyboardEvent<HTMLButtonElement | HTMLDivElement>) => {
+    if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') {
+      return;
+    }
+    event.preventDefault();
+    setIsOpen(true);
+
+    const firstItemSelector = 'li button:not(:disabled),li input:not(:disabled)';
+    const lastItemSelector = 'li:last-child button:not(:disabled),li:last-child input:not(:disabled)';
+
+    setTimeout(() => {
+      const elementToFocus = menuRef?.current?.querySelector(
+        event.key === 'ArrowDown' ? firstItemSelector : lastItemSelector
+      );
+      elementToFocus && (elementToFocus as HTMLElement).focus();
+    }, 10);
   };
 
   const toggle = (toggleRef: React.Ref<MenuToggleElement>) => (
@@ -29,6 +49,7 @@ export const SelectBasic: React.FunctionComponent = () => {
           width: '200px'
         } as React.CSSProperties
       }
+      onKeyDown={onKeyDown}
     >
       {selected}
     </MenuToggle>
@@ -44,6 +65,7 @@ export const SelectBasic: React.FunctionComponent = () => {
         style={{ marginBottom: 20 }}
       />
       <Select
+        ref={menuRef}
         id="single-select"
         isOpen={isOpen}
         selected={selected}
